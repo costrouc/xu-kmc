@@ -1,0 +1,12 @@
+language: python
+python:
+ - "3.5"
+ - "3.6"
+# travis does not support 3.7 yet
+# - "3.7"
+
+install:
+  - source .continuous-integration/travis/install.sh
+
+script:
+  - python setup.py test

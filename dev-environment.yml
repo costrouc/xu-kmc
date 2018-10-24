@@ -1,0 +1,18 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - numpy
+  - hoomd
+  # # for now test with mpi and gpu support
+  # # conda-forge recipe will need to be updated
+  # - mpi4py
+  # tests
+  - pytest-runner
+  - pytest
+  - pytest-cov
+  - pytest-flake8
+  # style enforcement
+  - flake8
+  # docs
+  - sphinx

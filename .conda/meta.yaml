@@ -1,0 +1,43 @@
+{% set build = 0 %}
+{% set version = '0.0.1' %}
+# {% set mpi = os.environ.get('MPI_VARIANT', 'openmpi') %}
+# {% set mpi_version = {'mpich': '3.2.*', 'openmpi': '3.0.*'}[mpi] %}
+
+package:
+  name: kmc
+  version: {{ version }}
+
+source:
+  git_url: ../../
+
+requirements:
+  build:
+    - python >=3.5
+    - pytest-runner
+    - numpy
+    - hoomd
+    # - mpi4py
+    # - {{ mpi }} {{ mpi_version }} # [unix]
+  run:
+    - python >=3.5
+    - numpy
+    - hoomd
+    # - mpi4py
+    # - {{ mpi }} {{ mpi_version }} # [unix]
+
+test: { }
+
+about:
+  home: https://github.com/costrouc/xu-kmc
+  license: Unlicense
+  license_family: PUBLIC-DOMAIN
+  license_file: LICENSE
+  summary: Kinetic Monte Carlo
+  description: |
+    Long description about what the code does.
+  # doc_url: ...
+  dev_url: https://github.com/costrouc/xu-kmc
+
+extra:
+  recipe-maintainers:
+    - costrouc
