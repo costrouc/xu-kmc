@@ -7,8 +7,8 @@ Dr. Xu's research group. Further description here.
 
 # Documentation
 
-Once name is finalized [readthedocs](https://readthedocs.org/) will be
-used.
+[readthedocs](https://readthedocs.org/) is a great way to host
+documentation. Fro now the [documentation is here](https://xu-kmc-example.readthedocs.io/en/latest/)
 
 # Installation
 
@@ -27,8 +27,8 @@ Eventually docker images will be build for application.
 package applications and libraries. He will work to ensure that this
 package is easily installable via `nix`.
 
- - building :: `nix-build`
- - installation :: `nix-shell shell.nix`
+ - building :: `nix-build .nix/default.nix`
+ - virtualenv with package :: `nix-shell .nix/shell.nix`
  
 # Development
 

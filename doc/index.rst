@@ -6,10 +6,15 @@
 Welcome to kmc's documentation!
 ===============================
 
+We write here a little bit about the packages and include images.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   installation
+   development
+   license
 
 
 Indices and tables

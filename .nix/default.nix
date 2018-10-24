@@ -7,7 +7,7 @@ pythonPackages.buildPythonPackage rec {
   src = ../.;
 
   buildInputs = with pythonPackages; [ pytestrunner ];
-  checkInputs = with pythonPackages; [ pytest pytestcov pytest-flake8 pythonPackages.sphinx pythonPackages.sphinx_rtd_theme ];
+  checkInputs = with pythonPackages; [ pytest pytestcov pytest-flake8 sphinx sphinx_rtd_theme ];
   propagatedBuildInputs = with pythonPackages; [ numpy ];
 
   checkPhase = ''
@@ -16,5 +16,7 @@ pythonPackages.buildPythonPackage rec {
     cd doc
     make apidocs
     make html
+    mkdir -p $out/share/kmc/html
+    cp -r _build/html/* $out/share/kmc/html
   '';
 }
